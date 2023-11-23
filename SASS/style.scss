@@ -1,0 +1,31 @@
+*{
+    margin: 5px;
+    padding: 5px;
+}
+
+img{
+    max-width: 45%;
+    max-height: auto; 
+}
+
+.componente{ //h1
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    color: rgb(255, 166, 0);
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+button{
+    border: none; 
+    background-color: rgba(163, 65, 16, 0.348);
+    color: white;//color de la letra
+    border-radius: 10px;//borde redondeado
+    font-size: 20px;//tamaño de letra
+    font-weight: normal;//quitamos las letras en negritas
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-top: 10px;
+}
