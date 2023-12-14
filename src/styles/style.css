@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/*LOGIN*/
+#emailLogin {
+  margin-left: -12px;
+}
+
+#imgLogin {
+  width: 100%;
+}
+
+#imgLogin1 {
+  width: 80%;
+  margin-left: -10px;
+}
+
+#containerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+#divLogin {
+  background-color: #efeded;
+  margin: 0 auto;
+  width: 21vw;
+  height: 25vw;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.inputLogin-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.iconLogin,
+.iconLogin imgLogin {
+  width: 6vw;
+  height: 6vw;
+}
+
+.inputLogin {
+  text-align: left;
+  margin-left: 10px;
+}
+
+#btnLogin {
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(250, 215, 241);
+  font-size: 20px;
+  width: 280px;
+  height: 40px;
+}
+
+#labelLogin,
+#labelInputLogin {
+  font-family: "Arial, Helvetica, sans-serif";
+  font-weight: bold;
+  text-align: center;
+}
+
+#labelInputLogin1 {
+  font-family: "Arial, Helvetica, sans-serif";
+  font-weight: bold;
+  text-align: left;
+  margin-left: -10px;
+}
+
+/*REGISTER*/
+#imgRegister {
+  height: auto;
+  width: 100%;
+}
+
+#emailRegister {
+  margin-left: -10px;
+}
+
+#imgRegister1 {
+  width: 80%;
+  height: auto;
+  margin-left: -10px;
+}
+
+#containerRegister {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+#divRegister {
+  background-color: #efeded;
+  margin: 0 auto;
+  width: 20vw;
+  height: 25vw;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.input-groupRegister {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.iconRegister,
+.iconRegister img {
+  width: 6vw;
+  height: 6vw;
+}
+
+.inputRegister {
+  text-align: left;
+  margin-left: 10px;
+}
+
+#btnRegister {
+  margin-top: 10px;
+  background-color: rgb(250, 215, 241);
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Arial, Helvetica, sans-serif";
+  width: 90%;
+  height: 3vw;
+}
+
+#labelRegister,
+#labelInputRegister {
+  font-family: "Arial, Helvetica, sans-serif";
+  font-weight: bold;
+  text-align: center;
+}
+
+#labelInputRegister1 {
+  font-family: "Arial, Helvetica, sans-serif";
+  font-weight: bold;
+  text-align: left;
+  margin-left: -10px;
+}
+
+/*LISTADO DE PRODUCTOS*/
+#pCategoria {
+  font-size: 30px;
+  color: rgb(63, 62, 63);
+  font-family: "Arial, Helvetica, sans-serif";
+  margin-left: 20px;
+}
+
+#divPublicidad {
+  width: 100%;
+}
+
+#btnCategories {
+  background-color: transparent;
+  font-size: 18px;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  border: none;
+  font-family: "Arial, Helvetica, sans-serif";
+}
+
+/* Estilos para las filas de artículos */
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.articulo {
+  width: 235px;
+  height: auto;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  border: none;
+  position: relative;
+  background-color: #efeded;
+}
+
+.articulo img {
+  max-width: 100%;
+  max-height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+#pPrice {
+  color: rgb(130, 26, 95);
+  font-size: 20px;
+}
+
+#btnAdd {
+  background-color: rgb(254, 191, 160);
+  width: 70%;
+  height: 35px;
+  color: white;
+  border: none;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+#cantidadInput {
+  width: 40px;
+  height: 32px;
+  font-size: 15px;
+  margin-right: 3px;
+  border: none;
+  margin-bottom: 5px;
+}
+
+/* Media Query para cambiar a 3 elementos por fila */
+@media (max-width: 1024px) {
+  .articulo {
+    width: calc(33.33% - 2vw);
+  }
+}
+/* Media Query para cambiar a 2 elementos por fila */
+@media (max-width: 768px) {
+  .articulo {
+    width: calc(50% - 2vw);
+  }
+}
+/* Media Query para cambiar a 1 elemento por fila */
+@media (max-width: 480px) {
+  .articulo {
+    width: calc(100% - 2vw);
+  }
+}
+/*POP UP*/
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 32px 16px 120px;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(249, 197, 209, 0.5);
+  display: grid;
+  place-items: center;
+}
+.pop-up-close {
+  position: absolute;
+  height: 52px;
+  width: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  font-size: 3rem;
+  color: #d6d6d6;
+  cursor: pointer;
+}
+.pop-up-inner {
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  width: 60%;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 250ms ease-in-out;
+}
+
+.anuncio-promocional {
+  color: #6b2737;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.destacado,
+.descuentos,
+p {
+  font-size: 13px;
+}
+
+.condiciones {
+  font-size: 11px;
+  color: #e06287;
+}
+
+.color {
+  color: #e06287;
+}
+
+.btn {
+  background-color: #e06287;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  font-size: 80%;
+  width: 140px;
+  height: 30px;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter .pop-up-inner,
+.fade-leave-to .pop-up-inner {
+  opacity: 0;
+  transform: translateY(-32px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 250ms ease-in-out;
+}
+
+.fade-leave-active {
+  transition-delay: 250ms;
+}
+
+/*SIDEBARFILTER*/
+.sidebar {
+  height: 100%;
+  width: 15vw;
+  padding: 12px;
+  background-color: rgb(199, 195, 199);
+  margin-left: 3px;
+  margin-top: -3px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+#btnSideBarFilter {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+input {
+  margin-right: 5px;
+}
+
+/*HEADER*/
+#th1Header {
+  width: 20%;
+}
+
+#th2Header {
+  width: 65%;
+  text-align: right;
+}
+
+#th3Header,
+#th4Header {
+  text-align: left;
+}
+
+#miInputHeader {
+  width: 35%;
+  height: 30px;
+  font-size: 15px;
+  border-color: #ccc;
+}
+
+#miInputHeader:hover::after {
+  color: #333;
+}
+
+#divIdHeader {
+  background-color: black;
+  height: 20px;
+}
+
+#pDivHeader {
+  color: white;
+  font-family: "Arial, Helvetica, sans-serif";
+  font-size: 15px;
+  font-weight: normal;
+}
+
+#btnCategoriaHeader {
+  background-color: transparent;
+  border: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 15px;
+  font-family: "Arial, Helvetica, sans-serif";
+}
+
+/*CARRITO*/
+#pCarrito {
+  font-size: 50px;
+  font-family: "Arial, Helvetica, sans-serif";
+}
+
+#btnCarrito {
+  background-color: rgb(162, 0, 255);
+  border: none;
+  border-radius: 50px;
+  font-size: 30px;
+  font-family: "Arial, Helvetica, sans-serif";
+  height: 40px;
+  width: 40px;
+  color: white;
+}
+
+#imgCart {
+  width: 20%;
+}
+
+#pCart {
+  color: rgb(130, 26, 95);
+  font-size: 15px;
+  font-family: "Arial, Helvetica, sans-serif";
+}
+
+/*FOOTER*/
+footer {
+  margin-top: 10px;
+  background-color: #efeded;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0%;
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  margin-left: 3px;
+}
+
+#pFooter {
+  font-size: 12px;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */

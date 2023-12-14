@@ -5,34 +5,59 @@ import App from './App.vue'
 
 import {createRouter, createWebHashHistory} from 'vue-router' // importarlo para usarlo mas abajo
 
-// Importar componentes (de cada equipo)
-import listado from './components/ListadoUsuarios.vue';
-import multimedia from './components/Multimedia.vue';
+import login from './components/Login.vue';
+import register from './components/register.vue';
+import home from './components/listadoProductos.vue';
+import carrito from './components/carrito.vue';
 
-// Definir componentes
 
-
-// Definir las rutas de los componentes
-// contiene todas las rutas el siguiente arreglo
 const routes = [
     {
-        path: '/', component: listado, 
+        path: '/',
+        component: login
     },
     {
-        path: '/', component: multimedia,
+        path: '/register',
+        component: register
     }
-]
+    ,
+    {
+        path: '/home',
+        component: home,
+        meta: { requiresAuth: true }
+    }
+    ,
+    {
+        path: '/carrito',
+        component: carrito,
+        meta: { requiresAuth: true }
+    }
+];
 
-// Crear las instancias de cada uno de los componentes
+//creamos las instancias
 const router = createRouter({
-    history: VueRouter.createWebHashHistory(),
-    routes,
-});
+    history: createWebHashHistory(),
+    routes
+})
 
-// Utilizar las instancias con Route desde Vue
+// Se configura el middleware de navegación
+router.beforeEach((to, from, next) => {
+    // Se verifica si la ruta requiere autenticación
+    const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  
+    // Si la ruta requiere autenticación y el usuario no está autenticado, se redirige a la página de inicio de sesión
+    if (requiresAuth && !localStorage.getItem('token')) {
+      next('/');
+    } else {
+      next();
+    }
+  });
+  
 
-const app = createApp(App);
-app.use(router);
-app.mount('#app');
+// intancia de vue
+const app = createApp(App)
 
-// createApp(App).mount('#app')
+//usamos el router en la app
+app.use(router)
+
+app.mount('#app')
